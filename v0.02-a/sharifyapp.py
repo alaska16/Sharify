@@ -3,10 +3,12 @@
 # Système de log
 # créer un dossier logs puis écrire vers latest.log
 # anciens latest.log deviennen† JJMMAAHHMM.log
+import logging
+logging.basicConfig(filename="latest.log", level=logging.DEBUG)
 
 # Informations
-print("Sharify Server v0.02-a, Ali KHELFAOUI (2022)")
-print("Date : 16SEP2022")
+logging.info("Sharify Server v0.02-a, Ali KHELFAOUI (2022)")
+logging.info("Date : 16SEP2022")
 
 # Chargement et initialisation des libraries
 import pygame
@@ -14,7 +16,7 @@ import socket
 import tqdm
 import os
 pygame.init()
-print("Libraries chargées et initialisées.")
+logging.info("Libraries chargées et initialisées.")
 pygame.display.set_caption("Sharify v0.02-a")
 
 # Réseau
@@ -26,9 +28,9 @@ SEPARATOR = "<SEPARATOR>"
 sharify_connect_receiver = socket.socket()
 sharify_connect_receiver.bind((SERVER_HOST, SERVER_PORT))
 sharify_connect_receiver.listen(10)
-print(f"En attente... ({SERVER_HOST} sur le port {SERVER_PORT})")
+logging.info(f"En attente... ({SERVER_HOST} sur le port {SERVER_PORT})")
 socket_sender, address = sharify_connect_receiver.accept()
-print(f"Connecté à {address}.")
+logging.info(f"Connecté à {address}.")
 # Échange de métadonnées
 received_metadata = socket_sender.recv(BUFFER_SIZE).decode() # Précédente erreur due à une confusion entre sockets (socket_sender et non pas sharify_...)
 filename, filesize = received_metadata.split(SEPARATOR)
