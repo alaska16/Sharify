@@ -12,9 +12,9 @@ SEPARATOR = "<SEPARATOR>"
 BUFFER_SIZE = 4096 # faire tests pr savoir quelle taille est optimale
 
 # Addresses IP et métadonnées
-host = "127.0.0.1"
+host = "127.0.0.1" # La machine qui reçoit le code
 port = 5555 #à terme, sera le port 80 (jsais pas si c'est possible, à voir)
-filename = "filetest.txt" 
+filename = "Spotify_Code.png" 
 filesize = os.path.getsize(filename)
 
 # TCP et connexion
