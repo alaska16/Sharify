@@ -3,7 +3,7 @@ Version goals:
 V0.01p : affichage d’une image
 V0.02a : échange réseau et système de log (erreurs réseau, icônes etc)
  
-V0.1a : communication avec application OU raccourci iPhone (client server)
+V0.1a : communication avec application OU raccourci iPhone (client server) GITHUB ACTIONS
 V0.1.1a: ajout de la date dans le log
 V0.2a : messages personnalisés
 V0.3a : tap the screen to view old codes

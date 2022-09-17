@@ -1,9 +1,11 @@
 # SERVER_RECEIVER
 
 # Variables 
+connected = False
 code_ok = False
 code_ko = False
 code_waiting = True # Ajouter condition si codes précédemment enregistrés, alors False
+running = True
 # Réseau
 SERVER_HOST = "0.0.0.0" # Cette machine
 SERVER_PORT = 5555
@@ -22,7 +24,8 @@ def connexion(): # Ajouter documentation
     logging.info(f"En attente... ({SERVER_HOST} sur le port {SERVER_PORT})")
     socket_sender, address = sharify_connect_receiver.accept()
     logging.info(f"Connecté à {address}.")
-    return socket_sender
+    connected = True
+    return sharify_connect_receiver, socket_sender
 
 def reception_png(): # Ajouter documentation
     # Échange de métadonnées
@@ -57,22 +60,22 @@ logging.info("Libraries chargées et initialisées.")
 pygame.display.set_caption("Sharify v0.02-a")
 # Informations
 logging.info("Sharify Server v0.02-a, Ali KHELFAOUI (2022)")
-logging.info("Date : 16SEP2022")
+logging.info("Date : 18SEP2022")
 
 # Initialisation écran
 screen = pygame.display.set_mode((screen_width, screen_height))
-spotifybar = pygame.image.load("Spotify_Code_waiting.png")
 
 # Boucle principale
-running = True
 while running:
+    if connected == False:
+        spotifybar = pygame.image.load("Spotify_Code_waiting.png")
+    # Affichage du Code Spotify
+    elif code_ok:
+        spotifybar = pygame.image.load("Spotify_Code.png")
+    elif code_ko:
+        spotifybar = pygame.image.load("Spotify_Code_ko.png")
     for event in pygame.event.get():
-        # Affichage du Code Spotify
-        if code_ok:
-            spotifybar = pygame.image.load("Spotify_Code.png")
-        elif code_ko:
-            spotifybar = pygame.image.load("Spotify_Code_ko.png")
-    screen.blit(spotifybar, (0, 0))        
-    pygame.display.flip()
+        screen.blit(spotifybar, (0, 0))        
+        pygame.display.flip()
     if event.type == pygame.QUIT:
         running = False
