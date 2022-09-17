@@ -23,8 +23,7 @@ print(f"Connexion à {host}:{port} en cours...") #ajouter condition après cette
 sharify_connect_sender.connect((host, int(port))) #port doit être un integer
 print("Connecté avec succès.")
 
-sharify_connect_sender.send(f"{filename}{SEPARATOR}{filesize}".encode())#tbh jcomprends pas comment le serveur recoit cette string (?) en comprenant tout de suite que c'est une string
-
+sharify_connect_sender.send(f"{filename}{SEPARATOR}{filesize}".encode())# j'ai capté
 #envoi du fichier
 progress = tqdm.tqdm(range(filesize), f"Envoi de {filename}", unit="B", unit_scale=True, unit_divisor=1024)
 with open(filename, "rb") as spotifycode:
