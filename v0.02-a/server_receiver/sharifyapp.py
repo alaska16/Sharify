@@ -15,7 +15,6 @@ SEPARATOR = "<SEPARATOR>"
 screen_width = 640
 screen_height = 160
 
-
 # Fonctions
 def connexion(): # Ajouter documentation
     sharify_connect_receiver = socket.socket()
@@ -25,7 +24,7 @@ def connexion(): # Ajouter documentation
     socket_sender, address = sharify_connect_receiver.accept()
     logging.info(f"Connecté à {address}.")
     connected = True
-    return sharify_connect_receiver, socket_sender
+    return sharify_connect_receiver, socket_sender, connected
 
 def reception_png(): # Ajouter documentation
     # Échange de métadonnées
@@ -44,7 +43,6 @@ def reception_png(): # Ajouter documentation
             progress.update(len(bytes_read))
             socket_sender.close()
             sharify_connect_receiver.close()
-            code_ok = True 
     # Ajouter condition si code_ko (erreur)
     # Ajouter condition si code_waiting (en attente de connexion ET aucun code précédemment enregistré)
 
@@ -65,17 +63,35 @@ logging.info("Date : 18SEP2022")
 # Initialisation écran
 screen = pygame.display.set_mode((screen_width, screen_height))
 
+# Temporaire : connexion (en attendant de faire fonctionner la fonction connexion())
+# sharify_connect_receiver = socket.socket()
+# sharify_connect_receiver.bind((SERVER_HOST, SERVER_PORT))
+# sharify_connect_receiver.listen(10)
+# logging.info(f"En attente... ({SERVER_HOST} sur le port {SERVER_PORT})")
+# logging.info(f"Connecté à {address}.")
+# connected = True
+# reception_png()
+# code_ok = True
+
 # Boucle principale
 while running:
     if connected == False:
         spotifybar = pygame.image.load("Spotify_Code_waiting.png")
-    # Affichage du Code Spotify
-    elif code_ok:
-        spotifybar = pygame.image.load("Spotify_Code.png")
-    elif code_ko:
-        spotifybar = pygame.image.load("Spotify_Code_ko.png")
-    for event in pygame.event.get():
-        screen.blit(spotifybar, (0, 0))        
+        screen.blit(spotifybar, (0, 0))
         pygame.display.flip()
-    if event.type == pygame.QUIT:
-        running = False
+        # connexion()
+    if connected == True:
+        # Affichage du Code Spotify
+        if code_ok:
+            spotifybar = pygame.image.load("Spotify_Code.png")
+            screen.blit(spotifybar, (0,0))
+            pygame.display.flip()
+        elif code_ko:
+            spotifybar = pygame.image.load("Spotify_Code_ko.png")
+            screen.blit(spotifybar, (0,0))
+            pygame.display.flip()
+    for event in pygame.event.get():
+        # screen.blit(spotifybar, (0, 0))        
+        # pygame.display.flip()
+        if event.type == pygame.QUIT:
+            running = False
