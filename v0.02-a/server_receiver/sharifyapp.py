@@ -18,12 +18,22 @@ screen_height = 160
 # Fonctions
 def connexion(): # Ajouter documentation
     sharify_connect_receiver = socket.socket()
+    sharify_connect_receiver.setblocking(0)
     sharify_connect_receiver.bind((SERVER_HOST, SERVER_PORT))
     sharify_connect_receiver.listen(10)
     logging.info(f"En attente... ({SERVER_HOST} sur le port {SERVER_PORT})")
-    socket_sender, address = sharify_connect_receiver.accept()
-    logging.info(f"Connecté à {address}.")
-    connected = True
+    while True: # Boucle sans conditions
+        try:
+            socket_sender, address = sharify_connect_receiver.accept()
+            logging.info(f"Connecté à {address}.")
+            connected = True
+            break
+        except BlockingIOError: # Si cette erreur est détectée, alors ...
+            logging.error("Erreur.")
+            socket_sender = 0
+            address = 0
+            connected = False
+            break
     return sharify_connect_receiver, socket_sender, connected
 
 def reception_png(): # Ajouter documentation
@@ -79,7 +89,7 @@ while running:
         spotifybar = pygame.image.load("Spotify_Code_waiting.png")
         screen.blit(spotifybar, (0, 0))
         pygame.display.flip()
-        # connexion()
+        connexion()
     if connected == True:
         # Affichage du Code Spotify
         if code_ok:
