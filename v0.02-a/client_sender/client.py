@@ -2,7 +2,6 @@
 # CLIENT_SENDER
 print("Sharify Client v0.02-a")
 print("19SEP22")
-from multiprocessing import connection
 import socket
 import os
 import tqdm
@@ -22,8 +21,9 @@ filesize = os.path.getsize(filename)
 # TCP et connexion
 sharify_connect_sender = socket.socket()
 
+# Boucle for pour pouvoir réitérer la connexion plusieurs fois en cas d'échec
 try:
-    print(f"Connexion à {host}:{port} en cours...") # ajouter condition après cette ligne en cas d'erreur pr afficher message d'erreur
+    print(f"Connexion à {host}:{port} en cours...")
     sharify_connect_sender.connect((host, int(port)))
     connexionok = True
     print("Connecté avec succès.")
