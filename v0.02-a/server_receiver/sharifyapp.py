@@ -2,9 +2,9 @@
 
 # Variables 
 connected = False
-code_ok = True
-code_ko = False
-code_waiting = True # Ajouter condition si codes précédemment enregistrés, alors False
+# code_ok = True
+# code_ko = False
+# code_waiting = True # Ajouter condition si codes précédemment enregistrés, alors False
 running = True
 # Réseau
 SERVER_HOST = "0.0.0.0" # Cette machine
@@ -20,14 +20,14 @@ import pygame
 import socket
 import tqdm
 import os
-import logging
+# import logging
 pygame.init()
-logging.basicConfig(filename="latest.log", level=logging.DEBUG)
-logging.info("Libraries chargées et initialisées.")
+# logging.basicConfig(filename="latest.log", level=logging.DEBUG)
+print("Libraries chargées et initialisées.")
 pygame.display.set_caption("Sharify v0.02-a")
 # Informations
-logging.info("Sharify Server v0.02-a, Ali KHELFAOUI (2022)")
-logging.info("Date : 18SEP2022")
+print("Sharify Server v0.02-a, Ali KHELFAOUI (2022)")
+print("Date : 19SEP2022")
 
 # Initialisation écran
 screen = pygame.display.set_mode((screen_width, screen_height))

@@ -3,12 +3,12 @@ Version goals:
 V0.01p : affichage d’une image
 V0.02a : échange réseau et système de log (erreurs réseau, icônes etc)
  Idée : séparer le serveur de Sharifyapp
-V0.1a : communication avec application OU raccourci iPhone (client server) GITHUB ACTIONS
-V0.1.1a: ajout de la date dans le log
+V0.1a : 
+V0.1.1a: ajout de la date dans le log (19 SEPTEMBRE : pas de log pour l'instant)
 V0.2a : messages personnalisés
 V0.3a : tap the screen to view old codes
 V0.4b : intégration dans le matériel
-V0.5b : échange réseau sécurisés
+V0.5b : échange réseau sécurisés, communication avec application OU raccourci iPhone (client server) GITHUB ACTIONS
 V0.6b : plusieurs écrans (écran 1 : code, écran 2 : paramètres IP etc)
 V1.0 : bug fixes, meta messages (batterie faible, connexion perdue, …)
 V1.1 : battery update
