@@ -5,8 +5,7 @@ print("Sharify Server v0.02-a, Ali KHELFAOUI (2022)")
 print("Date : 20SEP2022")
 
 # Fonctions
-def interface():
-    
+def interface():    
     pygame.draw.line(screen, r, (0, 160), (640, 160))
 
 # Variables 
@@ -32,19 +31,28 @@ import pygame
 import socket
 import tqdm
 import os
+import threading
+import subprocess
+from subprocess import call
 # import logging
-pygame.init()
 # logging.basicConfig(filename="latest.log", level=logging.DEBUG)
+pygame.init()
 print("Libraries chargées et initialisées.")
 pygame.display.set_caption("Sharify v0.1-a")
+
+# Lancement du serveur
+def launch_server():
+    call(["python3", "server.py"])
+serverThread = threading.Thread(target=launch_server)
+serverThread.start()
+print("Serveur initialisé.")
 
 # Initialisation écran
 screen = pygame.display.set_mode((screen_width, screen_height))
 
 # Boucle principale
 while running:
-    for event in pygame.event.get():
-        # os.system("python3 server.py")
+    for event in pygame.event.get(): 
         try:
             spotifybar = pygame.image.load("Spotify_Code.png") #FileNotFoundError
             screen.blit(spotifybar, (0, 0))        
