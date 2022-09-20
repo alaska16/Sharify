@@ -1,7 +1,7 @@
 # following this tutorial : https://www.thepythoncode.com/article/send-receive-files-using-sockets-python
 # CLIENT_SENDER
 print("Sharify Client v0.1a")
-print("20SEP22")
+print("21SEP22")
 import socket
 import os
 import tqdm
@@ -18,7 +18,7 @@ port = 5555
 filename = "Spotify_Code.png" 
 filesize = os.path.getsize(filename)
 
-# Gestion du socket
+# TCP et connexion
 sharify_connect_sender = socket.socket()
 
 # Boucle for pour pouvoir réitérer la connexion plusieurs fois en cas d'échec
@@ -28,14 +28,14 @@ try:
     # connexionok = True
     print("Connecté avec succès.")
     sharify_connect_sender.send(f"{filename}{SEPARATOR}{filesize}".encode())
-    # Envoi du fichier
+    #envoi du fichier
     progress = tqdm.tqdm(range(filesize), f"Envoi de {filename}", unit="B", unit_scale=True, unit_divisor=1024)
     with open(filename, "rb") as spotifycode:
         while True:
             bytes_read = spotifycode.read(BUFFER_SIZE) #lecture depuis le fichier
             if not bytes_read:
                 break #quand transmission s'arrête, stop
-            sharify_connect_sender.sendall(bytes_read) 
+            sharify_connect_sender.sendall(bytes_read) #envoyer les octets du buffer (?)
             progress.update(len(bytes_read))
     sharify_connect_sender.close()
 except ConnectionRefusedError: # Je ne comprends pas d'où vient OSError, à voir

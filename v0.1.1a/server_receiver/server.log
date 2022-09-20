@@ -1,0 +1,40 @@
+INFO:root:Chargement des librairies terminé.
+INFO:root:Le serveur est configuré pour écouter sur toutes les adresses IP de cette machine.
+INFO:root:Buffer size : 4096
+INFO:root:Socket créé.
+INFO:root:Écoute sur 0.0.0.0:5555.
+INFO:root:Chargement des librairies terminé.
+INFO:root:Le serveur est configuré pour écouter sur toutes les adresses IP de cette machine.
+INFO:root:Buffer size : 4096
+INFO:root:Socket créé.
+INFO:root:Écoute sur 0.0.0.0:5555.
+INFO:root:Connexion acceptée.
+INFO:root:Début de la réception du fichier...
+INFO:root:Écriture du fichier.
+INFO:root:Écriture du fichier.
+INFO:root:Fermeture des sockets.
+INFO:root:Chargement des librairies terminé.
+INFO:root:Le serveur est configuré pour écouter sur toutes les adresses IP de cette machine.
+INFO:root:Buffer size : 4096
+INFO:root:Socket créé.
+INFO:root:Écoute sur 0.0.0.0:5555.
+2022-09-21 00:09:26,846 Chargement des librairies terminé.
+2022-09-21 00:09:26,847 Le serveur est configuré pour écouter sur toutes les adresses IP de cette machine.
+2022-09-21 00:09:26,848 Buffer size : 4096
+2022-09-21 00:09:26,848 Socket créé.
+2022-09-21 00:09:26,848 Écoute sur 0.0.0.0:5555.
+2022-09-21 00:09:44,440 Chargement des librairies terminé.
+2022-09-21 00:09:44,446 Le serveur est configuré pour écouter sur toutes les adresses IP de cette machine.
+2022-09-21 00:09:44,447 Buffer size : 4096
+2022-09-21 00:09:44,448 Socket créé.
+2022-09-21 00:09:44,449 Écoute sur 0.0.0.0:5555.
+2022-09-21 00:09:58,795 Chargement des librairies terminé.
+2022-09-21 00:09:58,804 Le serveur est configuré pour écouter sur toutes les adresses IP de cette machine.
+2022-09-21 00:09:58,804 Buffer size : 4096
+2022-09-21 00:09:58,805 Socket créé.
+2022-09-21 00:09:58,805 Écoute sur 0.0.0.0:5555.
+2022-09-21 00:10:01,946 Connexion acceptée.
+2022-09-21 00:10:01,946 Début de la réception du fichier...
+2022-09-21 00:10:02,091 Écriture du fichier.
+2022-09-21 00:10:02,094 Écriture du fichier.
+2022-09-21 00:10:02,094 Fermeture des sockets.
