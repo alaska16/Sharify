@@ -11,10 +11,10 @@ SERVER_HOST = "0.0.0.0"
 SERVER_PORT = 5555
 BUFFER_SIZE = 4096
 SEPARATOR = "<SEPARATOR>"
+testvariable = 10
 # Gestion du socket
 receiver = socket.socket()
 receiver.bind((SERVER_HOST, SERVER_PORT))
-receiver.setblocking(0)
 receiver.listen(1)
 print(f"En attente sur {SERVER_HOST}:{SERVER_PORT}.")
 while True:

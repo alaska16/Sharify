@@ -43,15 +43,15 @@ screen = pygame.display.set_mode((screen_width, screen_height))
 
 # Boucle principale
 while running:
-    if connected == False:
-        spotifybar = pygame.image.load("Spotify_Code_waiting.png")
-        interface()
-        screen.blit(spotifybar, (0, 0))
-        pygame.display.flip()
     for event in pygame.event.get():
-        os.system("python3 server.py")
-        spotifybar = pygame.image.load("Spotify_Code.png")
-        screen.blit(spotifybar, (0, 0))        
-        pygame.display.flip()
+        # os.system("python3 server.py")
+        try:
+            spotifybar = pygame.image.load("Spotify_Code.png") #FileNotFoundError
+            screen.blit(spotifybar, (0, 0))        
+            pygame.display.flip()
+        except FileNotFoundError:
+            spotifybar = pygame.image.load("Spotify_Code_waiting.png")
+            screen.blit(spotifybar, (0, 0))        
+            pygame.display.flip()
         if event.type == pygame.QUIT:
             running = False
