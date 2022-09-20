@@ -1,7 +1,7 @@
 # following this tutorial : https://www.thepythoncode.com/article/send-receive-files-using-sockets-python
 # CLIENT_SENDER
-print("Sharify Client v0.02-a")
-print("19SEP22")
+print("Sharify Client v0.1a")
+print("20SEP22")
 import socket
 import os
 import tqdm
@@ -10,7 +10,7 @@ print("Librairies chargées.")
 # Variables (pour plus tard, sera modifiable dans les paramètres)
 SEPARATOR = "<SEPARATOR>"
 BUFFER_SIZE = 4096 # faire tests pr savoir quelle taille est optimale
-connexionok = False
+# connexionok = False
 
 # Addresses IP et métadonnées
 host = "127.0.0.1"
@@ -25,7 +25,7 @@ sharify_connect_sender = socket.socket()
 try:
     print(f"Connexion à {host}:{port} en cours...")
     sharify_connect_sender.connect((host, int(port)))
-    connexionok = True
+    # connexionok = True
     print("Connecté avec succès.")
     sharify_connect_sender.send(f"{filename}{SEPARATOR}{filesize}".encode())
     #envoi du fichier

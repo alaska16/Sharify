@@ -7,8 +7,9 @@ print("Date : 20SEP2022")
 # Fonctions
 def interface_attente():    
     pygame.draw.line(screen, r, (0, 160), (640, 160))
+    attente = font.render("En attente...", True, w)
+    screen.blit(attente, (8, 200))
 def interface(titre_musique, titre_album, artiste): # Paramètres : variable titre musique, artiste, AJOUTER GESTION DE L'ECRAN TACTILE ET LES MENUS
-    font = pygame.font.Font(None, 32)
     albumcover = pygame.image.load("placeholder.png")
     pygame.draw.line(screen, g, (0, 160), (640, 160))
     titrem_interface = font.render(titre_musique, True, w)
@@ -43,17 +44,18 @@ b = (0, 0, 255)
 w = (255, 255, 255)
 
 # Chargement et initialisation des libraries
-import pygame
-import socket
-import tqdm
-import os
-import threading
-import subprocess
-from subprocess import call
+# import socket
+# import tqdm
+# import os
+# import subprocess
 # import logging
 # logging.basicConfig(filename="latest.log", level=logging.DEBUG)
+import pygame
+import threading
+from subprocess import call
 pygame.init()
 print("Libraries chargées et initialisées.")
+font = pygame.font.Font(None, 32)
 pygame.display.set_caption("Sharify v0.1-a")
 
 # Lancement du serveur
