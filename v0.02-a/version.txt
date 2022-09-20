@@ -3,7 +3,7 @@ Version goals:
 V0.01p : affichage d’une image
 V0.02a : échange réseau et (système de log (erreurs réseau, icônes etc))
  Idée : séparer le serveur de Sharifyapp
-V0.1a : ajout du titre de la musique, prototype d'un menu
+V0.1a : ajout du titre de la musique, prototype d'un menu, amélioration server
 V0.1.1a: ajout de la date dans le log (19 SEPTEMBRE : pas de log pour l'instant)
 V0.2a : messages personnalisés
 V0.3a : tap the screen to view old codes

@@ -1,6 +1,7 @@
 # SERVER_RECEIVER
 # Sharify Server v0.1-a, 20/09/2022
 # Pas de logging pour l'instant
+# POUR PLUS TARD : récupération des métadonnées depuis internet
 import os
 import tqdm
 import socket
