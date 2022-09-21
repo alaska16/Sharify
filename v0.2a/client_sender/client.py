@@ -1,6 +1,8 @@
 # following this tutorial : https://www.thepythoncode.com/article/send-receive-files-using-sockets-python
 # CLIENT_SENDER
-print("Sharify Client v0.1a")
+# Envoie l'URL d'un titre Spotify (pour plus tard : pouvoir partager playlists)
+
+print("Sharify Client v0.2a")
 print("21SEP22")
 import socket
 import os

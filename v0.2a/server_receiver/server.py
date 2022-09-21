@@ -1,6 +1,7 @@
 # SERVER_RECEIVER
-# Sharify Server v0.1.1a, 21/09/2022
-# POUR PLUS TARD : récupération des métadonnées depuis internet
+# Sharify Server v0.2a, 21/09/2022
+# Reçoit l'URL d'un titre Spotify et les métadonnées associées
+
 import os
 import tqdm
 import socket
