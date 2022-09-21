@@ -48,3 +48,8 @@ INFO:root:Écoute sur 0.0.0.0:5555.
 2022-09-21 00:41:20,534 Buffer size : 4096
 2022-09-21 00:41:20,534 Socket créé.
 2022-09-21 00:41:20,534 Écoute sur 0.0.0.0:5555.
+2022-09-21 01:05:40,769 Chargement des librairies terminé.
+2022-09-21 01:05:40,777 Le serveur est configuré pour écouter sur toutes les adresses IP de cette machine.
+2022-09-21 01:05:40,779 Buffer size : 4096
+2022-09-21 01:05:40,780 Socket créé.
+2022-09-21 01:05:40,782 Écoute sur 0.0.0.0:5555.
