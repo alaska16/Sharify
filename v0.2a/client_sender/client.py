@@ -7,17 +7,24 @@ print("21SEP22")
 import socket
 import os
 import tqdm
+import requests
 print("Librairies chargées.")
 
 # Variables (pour plus tard, sera modifiable dans les paramètres)
 SEPARATOR = "<SEPARATOR>"
-BUFFER_SIZE = 4096 # faire tests pr savoir quelle taille est optimale
-# connexionok = False
+BUFFER_SIZE = 4096
 
-# Addresses IP et métadonnées
+# Addresses IP, métadonnées et téléchargement du code depuis Spotify
 host = "127.0.0.1"
 port = 5555
-filename = "Spotify_Code.png" 
+url = "https://scannables.scdn.co/uri/plain/png/000000/white/640/spotify:track:3u9fHuAtjMY1RW2mZfO4Cf" #22 : envoi des 22 derniers caractères à server.py puis télécharger code spotify avec scannables
+track_id = url[-22:]
+print(track_id) # récupérer métadonnées avec track id et api spotify, plus besoin d'envoyer le png depuis le client
+spotifycode = requests.get(url).content
+with open('Spotify_Code.png', 'wb') as download:
+    download.write(spotifycode) 
+print("Téléchargement du code Spotify terminé.")
+filename = "Spotify_Code.png"
 filesize = os.path.getsize(filename)
 
 # TCP et connexion
@@ -27,7 +34,6 @@ sender = socket.socket()
 try:
     print(f"Connexion à {host}:{port} en cours...")
     sender.connect((host, int(port)))
-    # connexionok = True
     print("Connecté avec succès.")
     sender.send(f"{filename}{SEPARATOR}{filesize}".encode())
     #envoi du fichier
