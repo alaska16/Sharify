@@ -207,3 +207,43 @@ INFO:root:Écoute sur 0.0.0.0:5555.
 2022-09-21 04:19:33,347 Buffer size : 4096
 2022-09-21 04:19:33,348 Socket créé.
 2022-09-21 04:19:33,348 Écoute sur 0.0.0.0:5555.
+2022-09-21 05:01:47,587 Chargement des librairies terminé.
+2022-09-21 05:01:47,599 Le serveur est configuré pour écouter sur toutes les adresses IP de cette machine.
+2022-09-21 05:01:47,600 Buffer size : 4096
+2022-09-21 05:01:47,601 Socket créé.
+2022-09-21 05:01:47,603 Écoute sur 0.0.0.0:5555.
+2022-09-21 05:01:51,353 Connexion acceptée.
+2022-09-21 05:01:51,354 Début de la réception du fichier...
+2022-09-21 05:01:51,515 Écriture du fichier.
+2022-09-21 05:01:51,516 Écriture du fichier.
+2022-09-21 05:01:51,516 Fermeture des sockets.
+2022-09-21 05:03:15,749 Chargement des librairies terminé.
+2022-09-21 05:03:15,964 Le serveur est configuré pour écouter sur toutes les adresses IP de cette machine.
+2022-09-21 05:03:15,965 Buffer size : 4096
+2022-09-21 05:03:15,965 Socket créé.
+2022-09-21 05:03:15,965 Écoute sur 0.0.0.0:5555.
+2022-09-21 05:03:18,748 Connexion acceptée.
+2022-09-21 05:03:18,748 Début de la réception du fichier...
+2022-09-21 05:03:18,965 Écriture du fichier.
+2022-09-21 05:03:18,974 Écriture du fichier.
+2022-09-21 05:03:18,975 Fermeture des sockets.
+2022-09-21 05:05:50,382 Chargement des librairies terminé.
+2022-09-21 05:05:50,394 Le serveur est configuré pour écouter sur toutes les adresses IP de cette machine.
+2022-09-21 05:05:50,394 Buffer size : 4096
+2022-09-21 05:05:50,395 Socket créé.
+2022-09-21 05:05:50,395 Écoute sur 0.0.0.0:5555.
+2022-09-21 05:06:04,649 Connexion acceptée.
+2022-09-21 05:06:04,649 Début de la réception du fichier...
+2022-09-21 05:06:04,818 Écriture du fichier.
+2022-09-21 05:06:04,834 Écriture du fichier.
+2022-09-21 05:06:04,834 Fermeture des sockets.
+2022-09-21 05:14:21,660 Chargement des librairies terminé.
+2022-09-21 05:14:21,679 Le serveur est configuré pour écouter sur toutes les adresses IP de cette machine.
+2022-09-21 05:14:21,681 Buffer size : 4096
+2022-09-21 05:14:21,681 Socket créé.
+2022-09-21 05:14:21,709 Écoute sur 0.0.0.0:5555.
+2022-09-21 05:14:36,244 Connexion acceptée.
+2022-09-21 05:14:36,244 Début de la réception du fichier...
+2022-09-21 05:14:36,399 Écriture du fichier.
+2022-09-21 05:14:36,400 Écriture du fichier.
+2022-09-21 05:14:36,401 Fermeture des sockets.

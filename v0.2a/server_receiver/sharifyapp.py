@@ -65,7 +65,7 @@ logging.basicConfig(filename='sharifyapp.log', encoding='utf-8', level=logging.D
 
 # Lancement du serveur
 def launch_server():
-    call(["python3", "server.py"])
+    call(["python3", "server2.py"])
 serverThread = threading.Thread(target=launch_server)
 serverThread.start()
 logging.info("Initalisation du serveur terminée.")
