@@ -53,3 +53,38 @@ INFO:root:Écoute sur 0.0.0.0:5555.
 2022-09-21 01:05:40,779 Buffer size : 4096
 2022-09-21 01:05:40,780 Socket créé.
 2022-09-21 01:05:40,782 Écoute sur 0.0.0.0:5555.
+2022-09-21 03:29:36,548 Chargement des librairies terminé.
+2022-09-21 03:29:36,555 Le serveur est configuré pour écouter sur toutes les adresses IP de cette machine.
+2022-09-21 03:29:36,555 Buffer size : 4096
+2022-09-21 03:29:36,555 Socket créé.
+2022-09-21 03:29:36,556 Écoute sur 0.0.0.0:5555.
+2022-09-21 03:42:00,297 Chargement des librairies terminé.
+2022-09-21 03:42:00,302 Le serveur est configuré pour écouter sur toutes les adresses IP de cette machine.
+2022-09-21 03:42:00,302 Buffer size : 4096
+2022-09-21 03:42:00,303 Socket créé.
+2022-09-21 03:42:00,303 Écoute sur 0.0.0.0:5555.
+2022-09-21 03:42:18,511 Connexion acceptée.
+2022-09-21 03:42:18,512 Début de la réception du fichier...
+2022-09-21 03:42:18,741 Écriture du fichier.
+2022-09-21 03:42:18,741 Écriture du fichier.
+2022-09-21 03:42:18,741 Fermeture des sockets.
+2022-09-21 03:50:45,389 Chargement des librairies terminé.
+2022-09-21 03:50:45,406 Le serveur est configuré pour écouter sur toutes les adresses IP de cette machine.
+2022-09-21 03:50:45,407 Buffer size : 4096
+2022-09-21 03:50:45,407 Socket créé.
+2022-09-21 03:50:45,409 Écoute sur 0.0.0.0:5555.
+2022-09-21 03:50:49,943 Connexion acceptée.
+2022-09-21 03:50:49,945 Début de la réception du fichier...
+2022-09-21 03:50:50,083 Écriture du fichier.
+2022-09-21 03:50:50,087 Écriture du fichier.
+2022-09-21 03:50:50,088 Fermeture des sockets.
+2022-09-21 03:51:47,262 Chargement des librairies terminé.
+2022-09-21 03:51:47,270 Le serveur est configuré pour écouter sur toutes les adresses IP de cette machine.
+2022-09-21 03:51:47,272 Buffer size : 4096
+2022-09-21 03:51:47,272 Socket créé.
+2022-09-21 03:51:47,274 Écoute sur 0.0.0.0:5555.
+2022-09-21 03:51:51,564 Connexion acceptée.
+2022-09-21 03:51:51,568 Début de la réception du fichier...
+2022-09-21 03:51:51,685 Écriture du fichier.
+2022-09-21 03:51:51,686 Écriture du fichier.
+2022-09-21 03:51:51,686 Fermeture des sockets.

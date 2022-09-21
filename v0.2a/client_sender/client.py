@@ -19,15 +19,15 @@ filename = "Spotify_Code.png"
 filesize = os.path.getsize(filename)
 
 # TCP et connexion
-sharify_connect_sender = socket.socket()
+sender = socket.socket()
 
 # Boucle for pour pouvoir réitérer la connexion plusieurs fois en cas d'échec
 try:
     print(f"Connexion à {host}:{port} en cours...")
-    sharify_connect_sender.connect((host, int(port)))
+    sender.connect((host, int(port)))
     # connexionok = True
     print("Connecté avec succès.")
-    sharify_connect_sender.send(f"{filename}{SEPARATOR}{filesize}".encode())
+    sender.send(f"{filename}{SEPARATOR}{filesize}".encode())
     #envoi du fichier
     progress = tqdm.tqdm(range(filesize), f"Envoi de {filename}", unit="B", unit_scale=True, unit_divisor=1024)
     with open(filename, "rb") as spotifycode:
@@ -35,9 +35,9 @@ try:
             bytes_read = spotifycode.read(BUFFER_SIZE) #lecture depuis le fichier
             if not bytes_read:
                 break #quand transmission s'arrête, stop
-            sharify_connect_sender.sendall(bytes_read) #envoyer les octets du buffer (?)
+            sender.sendall(bytes_read) #envoyer les octets du buffer (?)
             progress.update(len(bytes_read))
-    sharify_connect_sender.close()
+    sender.close()
 except ConnectionRefusedError: # Je ne comprends pas d'où vient OSError, à voir
     print("Le client n'a pas pu se connecter au serveur, vérifier vos paramètres de connexion.")
     pass
