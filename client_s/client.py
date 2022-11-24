@@ -1,9 +1,9 @@
-# following this tutorial : https://www.thepythoncode.com/article/send-receive-files-using-sockets-python
+# Following this tutorial : https://www.thepythoncode.com/article/send-receive-files-using-sockets-python
 # CLIENT_SENDER
 # Envoie l'URL d'un titre Spotify (pour plus tard : pouvoir partager playlists)
 
 print("Sharify Client v0.2a")
-print("21SEP22")
+print("24NOV22")
 import socket
 import os
 import tqdm
@@ -30,13 +30,13 @@ filesize = os.path.getsize(filename)
 # TCP et connexion
 sender = socket.socket()
 
-# Boucle for pour pouvoir réitérer la connexion plusieurs fois en cas d'échec
+# Pour plus tard : boucle for pour pouvoir réitérer la connexion plusieurs fois en cas d'échec
 try:
     print(f"Connexion à {host}:{port} en cours...")
     sender.connect((host, int(port)))
     print("Connecté avec succès.")
     sender.send(f"{filename}{SEPARATOR}{filesize}".encode())
-    #envoi du fichier
+    # Envoi du fichier
     progress = tqdm.tqdm(range(filesize), f"Envoi de {filename}", unit="B", unit_scale=True, unit_divisor=1024)
     with open(filename, "rb") as spotifycode:
         while True:
@@ -47,5 +47,5 @@ try:
             progress.update(len(bytes_read))
     sender.close()
 except ConnectionRefusedError: # Je ne comprends pas d'où vient OSError, à voir
-    print("Le client n'a pas pu se connecter au serveur, vérifier vos paramètres de connexion.")
+    print("Le client n'a pas pu se connecter au serveur, vérifiez vos paramètres de connexion.")
     pass

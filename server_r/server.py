@@ -1,5 +1,5 @@
 # SERVER_RECEIVER
-# Sharify Server v0.2a, 21/09/2022
+# Sharify Server v0.2a, 24/11/2022
 # Reçoit l'URL d'un titre Spotify et les métadonnées associées
 
 import os
@@ -40,7 +40,7 @@ while True:
             if not bytes_read:
                 break
             spotifycode.write(bytes_read)
-            logging.info("Écriture du fichier.")
+            logging.info("Écriture du fichier...")
             progress.update(len(bytes_read))
     sender.close()
     receiver.close()

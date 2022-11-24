@@ -1,8 +1,8 @@
 # DISPLAY_RECEIVER
 
 # Informations
-print("Sharify Server v0.1.1a, Ali KHELFAOUI (2022)")
-print("Date : 21SEP2022")
+print("Sharify Server v0.2a, Ali KHELFAOUI (2022)")
+print("Date : 24NOV2022")
 
 # Fonctions
 def interface_attente():    
@@ -56,16 +56,16 @@ import pygame
 import threading
 import logging
 from subprocess import call
+logging.basicConfig(filename='sharifyapp.log', encoding='utf-8', level=logging.DEBUG)
 pygame.init()
 logging.info("Chargement et initialisation des librairies terminée.")
 print("Libraries chargées et initialisées.")
 font = pygame.font.Font(None, 32)
 pygame.display.set_caption("Sharify v0.2a")
-logging.basicConfig(filename='sharifyapp.log', encoding='utf-8', level=logging.DEBUG)
 
 # Lancement du serveur
 def launch_server():
-    call(["python3", "server.py"])
+    call(["python", "server_r/server.py"])
 serverThread = threading.Thread(target=launch_server)
 serverThread.start()
 logging.info("Initalisation du serveur terminée.")
@@ -83,7 +83,7 @@ while running:
             interface("Titre morceau", "Titre album", "Nom de l'artiste", message)        
             pygame.display.flip()
         except FileNotFoundError:
-            spotifybar = pygame.image.load("Spotify_Code_empty.png")
+            spotifybar = pygame.image.load("server_r/Spotify_Code_empty.png")
             screen.blit(spotifybar, (0, 0))
             interface_attente()        
             pygame.display.flip()
